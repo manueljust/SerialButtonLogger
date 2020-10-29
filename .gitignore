@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/SerialButtonLogger
+/SerialButtonLogger/.vs/SerialButtonLogger/v14
+/SerialButtonLogger/bin
+/SerialButtonLogger/obj

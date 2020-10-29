@@ -1,0 +1,21 @@
+﻿<Window x:Class="SerialButtonLogger.AddTimeStampWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SerialButtonLogger"
+        mc:Ignorable="d"
+        x:Name="thisAddTimeStampWindow"
+        Title="Add Timestamp" Height="300" Width="300">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+        <StackPanel Orientation="Horizontal" Margin="2">
+            <Label Content="Date" Width="40" />
+            <DatePicker SelectedDate="{Binding ElementName=thisAddTimeStampWindow, Path=Date}" />
+        </StackPanel>
+        <DockPanel Margin="2">
+            <Label DockPanel.Dock="Left" Content="Time" Width="40" />
+            <TextBox Text="{Binding ElementName=thisAddTimeStampWindow, Path=Time}" />
+        </DockPanel>
+        <Button Content="Add" Click="ButtonAdd_Click" Margin="2" />
+    </StackPanel>
+</Window>
