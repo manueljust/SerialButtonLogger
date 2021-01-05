@@ -1,5 +1,6 @@
 ﻿using System;
-namespace SerialButtonLogger
+
+namespace SerialButtonLogger.Util
 {
     public static class ArrayExtensions
     {

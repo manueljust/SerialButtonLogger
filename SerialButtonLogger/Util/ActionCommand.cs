@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace SerialButtonLogger
+namespace SerialButtonLogger.Util
 {
     public class ActionCommand : ICommand
     {

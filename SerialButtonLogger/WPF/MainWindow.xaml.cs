@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SerialButtonLogger.Serial;
+using SerialButtonLogger.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
@@ -15,7 +17,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SerialButtonLogger
+namespace SerialButtonLogger.WPF
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

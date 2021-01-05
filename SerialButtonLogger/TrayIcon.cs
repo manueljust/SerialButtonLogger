@@ -1,4 +1,7 @@
 ﻿using Hardcodet.Wpf.TaskbarNotification;
+using SerialButtonLogger.Serial;
+using SerialButtonLogger.Util;
+using SerialButtonLogger.WPF;
 using System.Windows;
 using System.Windows.Controls;
 

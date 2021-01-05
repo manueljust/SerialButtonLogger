@@ -1,19 +1,20 @@
-﻿using System;
+﻿using SerialButtonLogger.Util;
+using System;
 using System.Collections.ObjectModel;
 using System.IO.Ports;
 
-namespace SerialButtonLogger
+namespace SerialButtonLogger.Serial
 {
     public class SerialListener : PropertyChangedAware, IDisposable
     {
-        public static readonly string EmptyPort = "select Port...";
-        private static readonly double _defaultDelayMilliseconds = 4;
+        private static readonly TimeSpan _defaultDelay = TimeSpan.FromMilliseconds(5);
 
         private SerialPort _serialPort = new SerialPort();
         private DelayedAction _loggingAction;
 
         public event CTSSwitchHandler CTSSwitch;
         public event EventHandler<LogMessage> LogMessageAvailable;
+        public static string EmptyPort { get; } = "select Port...";
 
         public ObservableCollection<string> Ports { get; private set; } = new ObservableCollection<string>() { EmptyPort };
 
@@ -37,7 +38,7 @@ namespace SerialButtonLogger
 
         public SerialListener()
         {
-            _loggingAction = new DelayedAction(PollCTS, _defaultDelayMilliseconds);
+            _loggingAction = new DelayedAction(PollCTS, _defaultDelay);
 
             _serialPort.PortName = EmptyPort;
             _serialPort.RtsEnable = true;

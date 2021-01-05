@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SerialButtonLogger
+namespace SerialButtonLogger.Serial
 {
     public delegate void CTSSwitchHandler(object sender, CTSSwitchEventArgs args);
 

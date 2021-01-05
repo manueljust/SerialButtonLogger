@@ -88,14 +88,14 @@
     <Compile Include="Logger.cs" />
     <Compile Include="LogMessage.cs" />
     <Compile Include="MonthData.cs" />
-    <Compile Include="ActionCommand.cs" />
+    <Compile Include="Util\ActionCommand.cs" />
     <Compile Include="WPF\MonthDataView.xaml.cs">
       <DependentUpon>MonthDataView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ObservableMonthDataCollection.cs" />
-    <Compile Include="TableCellExtensions.cs" />
+    <Compile Include="Util\TableCellExtensions.cs" />
     <Compile Include="Util\WindowExtensions.cs" />
-    <Compile Include="PropertyChangedAware.cs" />
+    <Compile Include="Util\PropertyChangedAware.cs" />
     <Compile Include="Serial\SerialListener.cs" />
     <Compile Include="TrayIcon.cs" />
     <Page Include="WPF\AddTimeStampWindow.xaml">
@@ -168,8 +168,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy $(TargetPath) C:\Temp\
-copy $(TargetDir)Hardcodet.Wpf.TaskbarNotification.dll C:\Temp\</PostBuildEvent>
+    <PostBuildEvent>xcopy $(TargetPath) C:\Temp\
+copy $(TargetDir)Hardcodet.Wpf.TaskbarNotification.dll C:\Temp\ /D /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SerialButtonLogger.Util;
+using System;
 using System.ComponentModel;
 using System.Linq;
 using System.Windows;
@@ -6,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 
-namespace SerialButtonLogger
+namespace SerialButtonLogger.WPF
 {
     /// <summary>
     /// Interaction logic for MonthDataView.xaml

@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Windows;
 
-namespace SerialButtonLogger
+namespace SerialButtonLogger.Util
 {
     internal static class WindowExtensions
     {

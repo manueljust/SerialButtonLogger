@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace SerialButtonLogger
+namespace SerialButtonLogger.Util
 {
     /// <summary>
     ///     Implementation of <see cref="INotifyPropertyChanged" /> to simplify models.
@@ -27,7 +27,7 @@ namespace SerialButtonLogger
         /// </returns>
         protected bool SetProperty<T>(ref T target, T value, [CallerMemberName] string propertyName = null)
         {
-            if(target.Equals(value))
+            if(Equals(target, value))
             {
                 return false;
             }

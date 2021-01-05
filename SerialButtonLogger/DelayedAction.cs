@@ -8,9 +8,9 @@ namespace SerialButtonLogger
         private Timer _timer = null;
         private int _fireCounter = 0;
 
-        public DelayedAction(Action callback, double delayMilliseconds = 10)
+        public DelayedAction(Action callback, TimeSpan delay)
         {
-            _timer = new Timer(delayMilliseconds);
+            _timer = new Timer(delay.TotalMilliseconds);
             _timer.Elapsed += (o, e) =>
             {
                 _timer.Stop();
